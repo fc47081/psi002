@@ -4,6 +4,8 @@ PARA CORRER O PROJETO:
 
 - Abrir um novo terminal e fazer : $mongod
 
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#install-mongodb-community-edition
+
 - Depois abrir o mongo onde :o host = localhost
                            :o port = 27017
 - Não é preciso mais nenhuma definição para o mongo apenas o host e o port
