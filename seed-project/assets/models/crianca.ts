@@ -1,7 +1,9 @@
 export class Crianca {
-    name: String;
-    tipo_de_sangue: String;
-    idade: Number;
-
-    //ocurr
+    name:String ;
+    data_de_nascimento:Date;
+    tipo_de_sangue:String;
+    cc: Number;//cartao de cidadao
+    nif:Number;
+    data_de_entrada:Date;
+    alergias:Array
 }
