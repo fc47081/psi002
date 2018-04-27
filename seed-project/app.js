@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
-
+var userRoutes = require('./routes/user');
 
 var app = express();
 // connecta a mongoDB
@@ -31,6 +31,8 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, OPTIONS');
     next();
 });
+
+app.use('/user', userRoutes);
 
 //qualquer pedido vai para a var appRoutes
 app.use('/', appRoutes);

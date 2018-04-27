@@ -1,42 +1,28 @@
 var express = require('express');
 var router = express.Router();
-var mongo = require('mongoose');
-var criancas = require('../models/criancas');
+var bcrypt = require('bcryptjs');
+var User = require('../models/user');
 
-router.get('/', function (req, res, next) {
-    res.render('index');
-});
-
-router.get('/criancas/:id', function (req, res, next) {
-    console.log(req.params.id);
-    criancas.find({}, function (err, crianca) {
+router.post('/', function (req, res, next) {
+    var user = new User({
+        nome: req.body.nome,
+        idade: req.body.idade,
+        estatuto: req.body.estatuto,
+        password: bcrypt.hashSync(req.body.password, 10),
+        email: req.body.email
+    });
+    user.save(function (err, result) {
         if (err) {
-            console.log('Erro no get do id');
-            return next(err);
-        } else {
-            res.json(crianca);
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
         }
+        res.status(201).json({
+            message: 'User created',
+            obj: result
+        });
     });
 });
 
-var express = require('express');
-var router = express.Router();
-
-router.get('/', function (req, res, next) {
-    res.render('index');
-});
-
-module.exports = router;
-router.get('/message/:msg', function (req, res, next) {
-    res.render('node', { message: req.params.msg });
-});
-
-router.get('/123', function (req, res, next) {
-    res.send("como e ki é meus putos");
-});
-
-router.post('/message', function (req, res, next) {
-    var message = req.body.message;
-    res.redirect('/message/' + message);
-});
 module.exports = router;

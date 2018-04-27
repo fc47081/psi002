@@ -1,0 +1,27 @@
+<div class="row justify-content-md-center">
+    <div class="col-md-4">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        formControlName="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                        type="password"
+                        id="password"
+                        class="form-control"
+                        formControlName="password">
+            </div>
+            <button 
+            style="background-color: black;"
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!myForm.valid">Entrar</button>
+        </form>
+    </div>
+</div>
