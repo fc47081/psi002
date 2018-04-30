@@ -36,13 +36,13 @@ router.post('/signin', function (req, res, next) {
         }
         if (!user) {
             return res.status(401).json({
-                title: 'Login failed',
+                title: 'Utilizador não existe!',
                 error: {message: 'Invalid login credentials'}
             });
         }
         if (!bcrypt.compareSync(req.body.password, user.password)) {
             return res.status(401).json({
-                title: 'Login failed',
+                title: 'Password errada!',
                 error: {message: 'Invalid login credentials'}
             });
         }
