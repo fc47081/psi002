@@ -1,27 +1,156 @@
-<div class="row justify-content-md-center">
-    <div class="col-md-4">
+
+<div class="container">
+	    
+		<div class="col-md-10 col-md-offset-1 main" >
+		<div class="col-md-6 left-side" >
+		<h3>MIMAR</h3>
+		<p>A Associação MIMAR é uma Instituição de Solidariedade Social
+
+                que criou um novo Centro de Acolhimento Temporário -
+                
+                CASA MIMAR - para crianças em perigo, dos 0 aos 6 anos,
+                
+                sem família natural conhecida ou que tenham sido por ela
+                
+                abandonadas ou retiradas por decisão judicial.</p>
+		<br>
+
+		</div><!--col-sm-6-->
+		
+		<div class="col-md-6 right-side">
+		<h3>Entrar</h3>
+		
+<!--Form with header-->
+<div class="form">
         <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                        type="email"
-                        id="email"
-                        class="form-control"
-                        formControlName="email">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                        type="password"
-                        id="password"
-                        class="form-control"
-                        formControlName="password">
-            </div>
-            <button 
-            style="background-color: black;"
-            class="btn btn-primary"
-            type="submit"
-            [disabled]="!myForm.valid">Entrar</button>
-        </form>
-    </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                            type="email"
+                            id="email"
+                            class="form-control"
+                            formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                            type="password"
+                            id="password"
+                            class="form-control"
+                            formControlName="password">
+                </div>
+                <button 
+                style="background-color: black; font-size: 18px;"
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="!myForm.valid">Entrar</button>
+    
+                <a href="/auth/signup" class="btn btn-link" style="color: black" >Registar</a>
+            </form>
 </div>
+<!--/Form with header-->
+
+		</div><!--col-sm-6-->
+		
+		
+        </div><!--col-sm-8-->
+        
+        </div><!--container-->
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+
+
+#playground-container {
+    height: 500px;
+    overflow: hidden !important;
+    
+}
+.main{margin-top:70px; 
+-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+padding:0px;
+background:#2196f3;
+}
+.fb:focus, .fb:hover{color:FFF !important;}
+body{
+font-family: 'Raleway', sans-serif;
+}
+
+.left-side{
+	padding:0px 0px 0px;
+	
+	background-size:cover;
+}
+.left-side h3{
+	font-size: 30px;
+    font-weight: 900;
+	color:#FFF;
+	padding: 50px 10px 00px 26px;
+	}
+	
+	.left-side p{
+    font-weight:700;
+	color:#FFF;
+	padding:10px 10px 10px 26px;
+	}
+
+	
+	.fb{background: #2d6bb7;
+    color: #FFF;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 15px;
+	margin-left:26px;-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);}
+	.tw{background: #20c1ed;
+    color: #FFF;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 15px;-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);}
+	
+	.right-side{
+	padding:0px 0px 0px;
+	background:#FFF;
+	background-size:cover;
+	min-height:514px;
+}
+	.right-side h3{
+	font-size: 30px;
+    font-weight: 700;
+	color:#000;
+	padding: 50px 10px 00px 50px;
+	}
+	.right-side p{
+    font-weight:600;
+	color:#000;
+	padding:10px 50px 10px 50px;
+	}
+	.form{padding:10px 50px 10px 50px;}
+    .form-control{box-shadow: none !important;
+    border-radius: 0px !important;
+    border-bottom: 1px solid #2196f3 !important;
+    border-top: 1px !important;
+    border-left: none !important;
+    border-right: none !important;}
+	.btn-deep-purple {
+    background: #2196f3;
+    border-radius: 18px;
+    padding: 5px 19px;
+    color: #FFF;
+    font-weight: 600;
+    float: right;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+}
+</style>

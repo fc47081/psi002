@@ -17,7 +17,7 @@ import {authRouting} from "./auth.routing";
         CommonModule,
         ReactiveFormsModule,
         authRouting
-    ]
+    ],
 })
 export class AuthModule {
 

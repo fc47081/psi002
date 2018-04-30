@@ -6,6 +6,8 @@ PARA CORRER O PROJETO:
 
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#install-mongodb-community-edition
 
+"C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe"
+
 - Depois abrir o mongo onde :o host = localhost
                            :o port = 27017
 - Não é preciso mais nenhuma definição para o mongo apenas o host e o port

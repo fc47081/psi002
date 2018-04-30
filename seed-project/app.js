@@ -32,6 +32,7 @@ app.use(function (req, res, next) {
     next();
 });
 
+//criação do user
 app.use('/user', userRoutes);
 
 //qualquer pedido vai para a var appRoutes
