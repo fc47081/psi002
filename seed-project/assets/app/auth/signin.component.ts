@@ -24,7 +24,9 @@ export class SigninComponent{
                     localStorage.setItem('userId', data.userId);
                     this.router.navigateByUrl('auth/logout');
                 },
-                error => console.log(error)
+                error => {
+                window.alert(error.title);
+                }
             );
         this.myForm.reset();
     }
