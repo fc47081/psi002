@@ -5,5 +5,4 @@ export class Crianca {
     cc: Number;//cartao de cidadao
     nif:Number;
     data_de_entrada:Date;
-    alergias:Array
 }

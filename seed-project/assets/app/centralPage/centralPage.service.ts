@@ -6,14 +6,15 @@ import { Criancas } from "./crianca.model";
 import {Observable} from "rxjs/Observable";
 
 @Injectable()
-export class centralPageService {
-    constructor(private http: Http) {}
+export class CentralPageService {
+ //   constructor(private http: Http) {}
 
-    register(crianca: Criancas) {
+ /*   register(crianca: Criancas) {
         const body = JSON.stringify(crianca);
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post('http://localhost:3000/crianca', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
+    */
 }

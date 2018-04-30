@@ -7,8 +7,10 @@ import { AuthenticationComponent } from "./auth/authentication.component";
 import { HeaderComponent } from "./header.component";
 import { routing } from "./app.routing";
 import { AuthService } from "./auth/auth.service";
+import { CentralPageService } from "./centralPage/centralPage.service";
 import { ErrorComponent } from "./errors/error.component";
 import { ErrorService } from "./errors/error.service";
+import { CentralPageComponent } from "./centralPage/centralPage.component";
 
 
 @NgModule({
@@ -16,14 +18,15 @@ import { ErrorService } from "./errors/error.service";
         AppComponent,
         AuthenticationComponent,
         HeaderComponent,
-        ErrorComponent
+        ErrorComponent,
+        CentralPageComponent
     ],
     imports: [
         BrowserModule,
         routing,
         HttpModule,
     ],
-    providers: [AuthService, ErrorService],
+    providers: [AuthService, ErrorService, CentralPageService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
