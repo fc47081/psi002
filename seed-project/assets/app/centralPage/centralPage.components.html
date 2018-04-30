@@ -3,6 +3,7 @@
 <head>
   <title></title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -19,18 +20,64 @@
 
     <!-- menu options -->
     <a href="#" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
-" style="padding-top: 50px; padding-bottom: 50px; margin-top: 40px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Criança</a> 
+    " style="padding-top: 50px; padding-bottom: 50px; margin-top: 40px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Criança</a> 
     <a href="#" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
-" style="padding-top: 50px; padding-bottom: 50px; margin-top: 10px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Actividade</a>
+    " style="padding-top: 50px; padding-bottom: 50px; margin-top: 10px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Actividade</a>
     <a href="#" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
-" style="padding-top: 50px; padding-bottom: 50px; margin-top: 10px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Ocorrência</a>
+    " style="padding-top: 50px; padding-bottom: 50px; margin-top: 10px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Ocorrência</a>
   </div>
 
   <!-- Overlay -->
-  <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer; : #ffa64d"></div>
+  <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer; color: #ffa64d"></div>
 
   <!-- Page content -->
   <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+
+  <div class="w3-container" style="width: 50%; margin: auto;">
+    <ul class="w3-ul w3-card-4">
+      <li class="w3-bar">
+        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
+        <div class="w3-bar-item">
+          <button onclick="myFunction('PedroMarquesInfo')" class="w3-button w3-block w3-left-align">
+            Pedro Marques 21 Masculino
+          </button>
+
+          <div id="PedroMarquesInfo" class="w3-container w3-hide">
+            <p>Tipo de sangue: Bom de mais</p>
+            <p>Tipo de sangue: MegaOP</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
+        <div class="w3-bar-item">
+          <button onclick="myFunction('RuiInfo')" class="w3-button w3-block w3-left-align">
+            Rui 21 Masculino
+          </button>
+
+          <div id="RuiInfo" class="w3-container w3-hide">
+            <p>Tipo de sangue: Bom de mais</p>
+            <p>Tipo de sangue: MegaOP</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <img src="http://localhost:3000/images/girl.png" class="w3-bar-item w3-circle w3-hide-small" alt="Girl" style="width:85px">
+        <div class="w3-bar-item">
+          <button onclick="myFunction('RicardoInfo')" class="w3-button w3-block w3-left-align">
+            Ricardo 21 Masculino
+          </button>
+
+          <div id="RicardoInfo" class="w3-container w3-hide">
+            <p>Tipo de sangue: Bom de mais</p>
+            <p>Tipo de sangue: MegaOP</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 
   <!-- JS to open and close sidebar with overlay effect -->
   <script>
@@ -44,5 +91,19 @@
       document.getElementById("myOverlay").style.display = "none";
     }
   </script>
+
+  <!-- JS to make accordion -->
+
+  <script>
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
 </body>
 </html>
