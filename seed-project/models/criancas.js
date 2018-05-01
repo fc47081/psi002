@@ -2,12 +2,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var schema = new Schema({
-    name: { type: String },
+    nome: { type: String },
+    sexo: { type: String },
     data_de_nascimento: { type: Date },
-    tipo_de_sangue: { type: String },
-    cc: { type: Number },//cartao de cidadao
-    nif: { type: Number },
     data_de_entrada: { type: Date },
-    alergias: { type: Array }
+    tipo_de_sangue: { type: String },
+    cc: { type: String },
+    nif: { type: String },
+    userId: { type: String }
 });
 module.exports = mongoose.model('Criancas', schema);
