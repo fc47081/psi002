@@ -7,7 +7,7 @@ import { RegistaCriancaComponent } from "./registaCrianca/registaCrianca.compone
 import { LoggedInGuard } from "./logged-in.guard";
 
 const APP_ROUTES: Routes =  [
-    { path: '', redirectTo: '/auth/signin', pathMatch: 'full' },
+    { path: '', redirectTo: '/centralPage', pathMatch: 'full' },
     { path: 'auth', component: AuthenticationComponent, loadChildren: './auth/auth.module#AuthModule' },
     { path: 'centralPage', component: CentralPageComponent, canActivate: [LoggedInGuard]},
     { path: 'registaCrianca', component: RegistaCriancaComponent, canActivate: [LoggedInGuard]},
