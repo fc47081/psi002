@@ -39,6 +39,7 @@ export class RegistaCriancaComponent implements OnInit {
     ngOnInit() {
         this.myForm = new FormGroup({
             nome: new FormControl(null, Validators.required),
+            sexo: new FormControl(null, Validators.required),
             data_de_nascimento: new FormControl(null, Validators.required),
             data_de_entrada: new FormControl(null, Validators.required),
             tipo_de_sangue: new FormControl(null, Validators.required),

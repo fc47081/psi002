@@ -15,6 +15,7 @@ import { RegistaCriancaService } from './registaCrianca/registaCrianca.service';
 import { RegistaCriancaComponent } from './registaCrianca/registaCrianca.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoggedInGuard } from './logged-in.guard';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         HeaderComponent,
         ErrorComponent,
         CentralPageComponent,
-        RegistaCriancaComponent
+        RegistaCriancaComponent,
     ],
     imports: [
         BrowserModule,
@@ -33,7 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         CommonModule,
         ReactiveFormsModule,
     ],
-    providers: [AuthService, ErrorService, CentralPageService, RegistaCriancaService],
+    providers: [AuthService, ErrorService, CentralPageService, RegistaCriancaService, LoggedInGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {
