@@ -22,7 +22,7 @@ export class RegistaCriancaComponent implements OnInit {
             this.myForm.value.tipo_de_sangue,
             this.myForm.value.cc,
             this.myForm.value.nif, 
-            this.myForm.value.userId,
+            localStorage.getItem('userId'),
         );
         this.registaCriancaService.register(crianca)
             .subscribe(

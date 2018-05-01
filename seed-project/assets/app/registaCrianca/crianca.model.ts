@@ -6,5 +6,5 @@ export class Criancas {
                 public tipo_de_sangue: String,
                 public cc: String,
                 public nif: String,
-                public userId: String ) {}
+                public responsavel: String ) {}
 }

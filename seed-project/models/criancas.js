@@ -9,6 +9,6 @@ var schema = new Schema({
     tipo_de_sangue: { type: String },
     cc: { type: String },
     nif: { type: String },
-    userId: { type: String }
+    responsavel: { type: String }
 });
 module.exports = mongoose.model('Criancas', schema);

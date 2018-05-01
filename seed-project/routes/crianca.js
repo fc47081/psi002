@@ -10,7 +10,8 @@ router.post('/', function (req, res, next) {
         data_de_entrada: req.body.data_de_entrada,
         tipo_de_sangue: req.body.tipo_de_sangue,
         cc: req.body.cc,
-        nif: req.body.nif
+        nif: req.body.nif,
+        responsavel: req.body.responsavel
     });
     crianca.save(function (err, result) {
         if (err) {
