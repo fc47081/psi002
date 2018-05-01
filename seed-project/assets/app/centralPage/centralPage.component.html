@@ -80,17 +80,30 @@
   </div>
 
   <!-- Footer -->
-  <footer style="width: 100%; position: fixed; bottom: 0; left: 0; text-align: center; background-color: #2196f3">
-   <div class="w3-row">
-     <div class="w3-third w3-padding w3-mobile">
+  <footer style="width: 100%; position: fixed; bottom: 0; left: 0; background-color: #2196f3; color: white; font-size: 13px;">
+   <div class="w3-row" style="float: right;">
+     <div class="w3-quarter w3-mobile" style="padding-right: 100px; ">
        <p>Email:</p>
        <p><a href="mailto:someone@example.com">mimar@mimar.pt</a></p>
      </div>
-   </div>
- </footer>
+     <div class="w3-quarter w3-mobile" style="padding-right: 100px;">
+       <p>CASA MIMAR</p>
+       <p>Praceta de Santa Catarina n.º 25</p>
+     </div>
+     <div class="w3-quarter w3-mobile" style="padding-right: 100px;">
+       <p>Powered By:</p>
+       <p>Associação Mimar</p>
+     </div>
+     <div class="w3-quarter w3-mobile" style="padding-right: 100px; margin-top: 20px;">
+       <a href="https://www.facebook.com/Associa%C3%A7%C3%A3o-Mimar-184127956290/">
+        <img class="facebook" src="http://localhost:3000/images/facebook.png" alt="facebook" style="width: 30px; height: 30px;">
+      </a>
+    </div>
+  </div>
+</footer>
 
- <!-- JS to open and close sidebar with overlay effect -->
- <script>
+<!-- JS to open and close sidebar with overlay effect -->
+<script>
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
@@ -103,7 +116,6 @@
 </script>
 
 <!-- JS to make accordion -->
-
 <script>
   function myFunction(id) {
     var x = document.getElementById(id);
