@@ -2,7 +2,6 @@ import {Component} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 
-import { Criancas } from "./crianca.model";
 import {CentralPageService} from "./centralPage.service";
 
 @Component({

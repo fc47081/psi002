@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 var userRoutes = require('./routes/user');
+var criancaRoutes = require('./routes/crianca');
 
 var app = express();
 // connecta a mongoDB
@@ -34,6 +35,9 @@ app.use(function (req, res, next) {
 
 //criação do user
 app.use('/user', userRoutes);
+
+//criação do user
+app.use('/crianca', criancaRoutes);
 
 //qualquer pedido vai para a var appRoutes
 app.use('/', appRoutes);

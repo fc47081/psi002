@@ -11,6 +11,10 @@ import { CentralPageService } from "./centralPage/centralPage.service";
 import { ErrorComponent } from "./errors/error.component";
 import { ErrorService } from "./errors/error.service";
 import { CentralPageComponent } from "./centralPage/centralPage.component";
+import { RegistaCriancaService } from './registaCrianca/registaCrianca.service';
+import { RegistaCriancaComponent } from './registaCrianca/registaCrianca.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,14 +23,17 @@ import { CentralPageComponent } from "./centralPage/centralPage.component";
         AuthenticationComponent,
         HeaderComponent,
         ErrorComponent,
-        CentralPageComponent
+        CentralPageComponent,
+        RegistaCriancaComponent
     ],
     imports: [
         BrowserModule,
         routing,
         HttpModule,
+        CommonModule,
+        ReactiveFormsModule,
     ],
-    providers: [AuthService, ErrorService, CentralPageService],
+    providers: [AuthService, ErrorService, CentralPageService, RegistaCriancaService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
