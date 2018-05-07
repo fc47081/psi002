@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 var userRoutes = require('./routes/user');
 var criancaRoutes = require('./routes/crianca');
+var atividadeRoutes = require('./routes/atividade');
 
 var app = express();
 // connecta a mongoDB
@@ -36,8 +37,11 @@ app.use(function (req, res, next) {
 //criação do user
 app.use('/user', userRoutes);
 
-//criação do user
+//criação do crianca
 app.use('/crianca', criancaRoutes);
+
+//criação da atividade
+app.use('/atividade', atividadeRoutes);
 
 //qualquer pedido vai para a var appRoutes
 app.use('/', appRoutes);

@@ -25,7 +25,7 @@
 <div class="form">
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label for="nome">Data da Atividade</label>
+            <label for="data_atividade">Data da Atividade</label>
             <input
                     type="datetime-local"
                     id="data_atividade"
@@ -34,13 +34,14 @@
         </div>
 
         <div class="form-group">
-                <label for="tipo_da_atividade">Tipo de Atividade</label>
-                <select type="text" id="tipo_da_atividade" class="form-control" formControlName="tipo_da_atividade">
+                <label for="tipo_atividade">Tipo de Atividade</label>
+                <select type="text" id="tipo_atividade" class="form-control" formControlName="tipo_atividade">
                         <option> </option>
                         <option>Masculino</option>
                         <option>Feminino</option>
                 </select>
             </div>
+           
 
             <div class="form-group">
                 <label for="local_atividade">Local da Atividade</label>
@@ -61,6 +62,7 @@
             </div>
 
             <div class="form-group">
+<<<<<<< HEAD
                 <label for="turno">Turno</label>
                 <select type="text" id="turno" class="form-control" formControlName="turno">
                         <option> </option>
@@ -69,6 +71,16 @@
                 </select>
             </div>
     
+=======
+                    <label for="turno">Turno</label>
+                    <select type="text" id="turno" class="form-control" formControlName="turno">
+                            <option> </option>
+                            <option>Manhã</option>
+                            <option>Tarde</option>
+                    </select>
+                </div>
+             
+>>>>>>> 449d5c5d74aed88ff42210530f4376e2a595cd5d
         <button
         style="background-color: black; font-size: 18px;"
         class="btn btn-primary"
