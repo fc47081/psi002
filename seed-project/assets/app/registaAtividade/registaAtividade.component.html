@@ -1,0 +1,201 @@
+
+<div class="w3-container">
+
+    <div class="col-md-10 col-md-offset-1 main" style="height:670px; background-color: powderblue;" >
+            <div class="col-md-6 left-side" style="height:670px;">
+                
+                <div class="w3-container">
+                    <br>
+                    <div class="w3-row" style="margin-top: 60px">
+                        <div class="w3-third w3-padding w3-mobile">
+                            <img src="http://diretorio.sector3.pt/Repository/Images/Logos/3f736a31-c1fd-47d2-88e5-c5e7b74bf8e0.jpg" height="250" width="300" class="center" alt="mimar logo failed">
+                        </div>
+                        <div class="w3-third w3-padding w3-mobile" style="margin-top: 2%">
+                            <img src="http://localhost:3000/images/Cat2.jpg" height="250" width="300" class="center" alt="mimar">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                
+            </div><!--col-sm-6-->
+            
+            <div class="col-md-6 right-side" style="height:670px;">
+            <h3>Registar Atividade</h3>
+
+<div class="form">
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="data_atividade">Data da Atividade</label>
+            <input
+                    type="datetime-local"
+                    id="data_atividade"
+                    class="form-control"
+                    formControlName="data_atividade">
+        </div>
+
+        <div class="form-group">
+                <label for="tipo_atividade">Tipo de Atividade</label>
+                <select type="text" id="tipo_atividade" class="form-control" formControlName="tipo_atividade">
+                        <option> </option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                </select>
+            </div>
+           
+
+            <div class="form-group">
+                <label for="local_atividade">Local da Atividade</label>
+                <select type="text" id="local_atividade" class="form-control" formControlName="local_atividade">
+                        <option> </option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="crianca_associada">Criança Associada</label>
+                <select type="text" id="crianca_associada" class="form-control" formControlName="crianca_associada">
+                        <option> </option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+<<<<<<< HEAD
+                <label for="turno">Turno</label>
+                <select type="text" id="turno" class="form-control" formControlName="turno">
+                        <option> </option>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                </select>
+            </div>
+    
+=======
+                    <label for="turno">Turno</label>
+                    <select type="text" id="turno" class="form-control" formControlName="turno">
+                            <option> </option>
+                            <option>Manhã</option>
+                            <option>Tarde</option>
+                    </select>
+                </div>
+             
+>>>>>>> 449d5c5d74aed88ff42210530f4376e2a595cd5d
+        <button
+        style="background-color: black; font-size: 18px;"
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!myForm.valid">Registar</button>
+      
+</form>
+
+</div>
+
+</div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+
+
+#playground-container {
+height: 500px;
+overflow: hidden !important;
+
+}
+.main{margin-top:70px; 
+-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+padding:0px;
+background:#2196f3;
+}
+.fb:focus, .fb:hover{color:FFF !important;}
+body{
+font-family: 'Raleway', sans-serif;
+}
+
+.left-side{
+padding:0px 0px 0px;
+height: 550px;
+background-size:cover;
+}
+.left-side h3{
+font-size: 30px;
+font-weight: 900;
+color:#FFF;
+padding: 50px 10px 00px 26px;
+}
+
+.left-side p{
+font-weight:700;
+color:#FFF;
+padding:10px 10px 10px 26px;
+}
+
+
+.fb{background: #2d6bb7;
+color: #FFF;
+padding: 10px 15px;
+border-radius: 18px;
+font-size: 12px;
+font-weight: 600;
+margin-right: 15px;
+margin-left:26px;-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);}
+.tw{background: #20c1ed;
+color: #FFF;
+padding: 10px 15px;
+border-radius: 18px;
+font-size: 12px;
+font-weight: 600;
+margin-right: 15px;-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);}
+
+.right-side{
+padding:0px 0px 0px;
+background:#FFF;
+background-size:cover;
+min-height:514px;
+height: 550px;
+}
+.right-side h3{
+font-size: 30px;
+font-weight: 700;
+color:#000;
+padding: 50px 10px 00px 50px;
+}
+.right-side p{
+font-weight:600;
+color:#000;
+padding:10px 50px 10px 50px;
+}
+.form{padding:10px 50px 10px 50px;}
+.form-control{box-shadow: none !important;
+border-radius: 0px !important;
+border-bottom: 1px solid #2196f3 !important;
+border-top: 1px !important;
+border-left: none !important;
+border-right: none !important;}
+.btn-deep-purple {
+background: #2196f3;
+border-radius: 18px;
+padding: 5px 19px;
+color: #FFF;
+font-weight: 600;
+float: right;
+-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+}
+
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+</style>
+
