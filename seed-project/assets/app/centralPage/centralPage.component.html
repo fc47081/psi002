@@ -6,14 +6,24 @@
 </head>
 
   <!-- Log out button -->
-<div style="float: right; margin-top: 2%;">
-  <button class="btn btn-danger" (click)="onLogout()">Logout</button>
-</div>
+
   <!-- Sidebar LEFT -->
   <div class="w3-sidebar w3-bar-block w3-collapse" style="display: none; background: #00A0AF; padding: 5px; width: 15%; position: fixed; left: 0;" id="mySidebar">
     <h3 class="w3-bar-item">
         <img class="logo" src="http://localhost:3000/images/favicon.jpeg" alt="mimar" style="width: 60%; height: 60%; margin-left: 30px; margin-top: 15px">
     </h3>
+    <a href="/registaCrianca" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
+    " style="padding-top: 50px; padding-bottom: 50px; margin-top: 40px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Criança</a> 
+    <a href="#" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
+    " style="padding-top: 50px; padding-bottom: 50px; margin-top: 10px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Actividade</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
+    " style="padding-top: 50px; padding-bottom: 50px; margin-top: 10px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Ocorrência</a>
+  </div>
+
+  <!-- Sidebar RIGHT -->
+  <div class="w3-sidebar w3-bar-block w3-collapse" style="display: none; background: #00A0AF; padding: 5px; width: 15%; position: fixed; right: 0;" id="mySidebar">    
+        
+    <button class="btn btn-danger" (click)="onLogout()">Logout</button>
     <a href="/registaCrianca" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
     " style="padding-top: 50px; padding-bottom: 50px; margin-top: 40px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Criança</a> 
     <a href="#" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
