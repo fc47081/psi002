@@ -22,7 +22,6 @@ export class RegistaAtividadeComponent implements OnInit {
             this.myForm.value.turno,
             localStorage.getItem('userId'),
         );
-
         this.registaAtividadeService.register(atividade)
             .subscribe(
                 data => {
