@@ -20,80 +20,51 @@
             </div><!--col-sm-6-->
             
             <div class="col-md-6 right-side" style="height:670px;">
-            <h3>Registar Criança</h3>
+            <h3>Registar Atividade</h3>
 
 <div class="form">
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label for="nome">Nome</label>
+            <label for="nome">Data da Atividade</label>
             <input
-                    type="text"
-                    id="nome"
+                    type="datetime-local"
+                    id="data_atividade"
                     class="form-control"
-                    formControlName="nome">
+                    formControlName="data_atividade">
         </div>
 
         <div class="form-group">
-                <label for="sexo">Sexo</label>
-                <select  type="text" id="sexo" class="form-control" formControlName="sexo">
+                <label for="tipo_da_atividade">Tipo de Atividade</label>
+                <select type="text" id="tipo_da_atividade" class="form-control" formControlName="tipo_da_atividade">
                         <option> </option>
                         <option>Masculino</option>
                         <option>Feminino</option>
                 </select>
             </div>
 
-        <div class="form-group">
-            <label for="data_de_nascimento">Data de Nascimento</label>
-            <input
-                    type="date"
-                    id="data_de_nascimento"
-                    class="form-control"
-                    formControlName="data_de_nascimento">
-        </div>
+            <div class="form-group">
+                <label for="local_atividade">Local da Atividade</label>
+                <select type="text" id="local_atividade" class="form-control" formControlName="local_atividade">
+                        <option> </option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                </select>
+            </div>
 
-        <div class="form-group">
-            <label for="data_de_entrada">Data de Entrada</label>
-            <input
-                    type="date"
-                    id="data_de_entrada"
-                    class="form-control"
-                    formControlName="data_de_entrada">
-        </div>
+            <div class="form-group">
+                <label for="crianca_associada">Criança Associada</label>
+                <select type="text" id="crianca_associada" class="form-control" formControlName="crianca_associada">
+                        <option> </option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                </select>
+            </div>
 
-        <div class="form-group">
-            <label for="tipo_de_sangue">Tipo de Sangue</label>
-            <select  type="text" id="tipo_de_sangue" class="form-control" formControlName="tipo_de_sangue">
-                    <option> </option>
-                    <option>A+</option>
-                    <option>A-</option>
-                    <option>B+</option>
-                    <option>B-</option>
-                    <option>O+</option>
-                    <option>O-</option>
-                    <option>AB+</option>
-                    <option>AB-</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="cc"> Nº Cartão de Cidadão</label>
-            <input
-                    type="text"
-                    id="cc"
-                    class="form-control"
-                    formControlName="cc"
-                    maxlength="8">
-        </div>
+           
 
-        <div class="form-group">
-            <label for="nif"> Nº Identificação Fiscal</label>
-            <input
-                    type="text"
-                    id="nif"
-                    class="form-control"
-                    formControlName="nif"
-                    maxlength="9">
-        </div>
 
+
+             
         <button
         style="background-color: black; font-size: 18px;"
         class="btn btn-primary"
