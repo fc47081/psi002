@@ -18,6 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoggedInGuard } from './logged-in.guard';
 import { RegistaAtividadeComponent } from './registaAtividade/registaAtividade.component';
 import { RegistaAtividadeService } from './registaAtividade/registaAtividade.service';
+import { RegistaOcorrenciaComponent } from './registaOcorrencia/registaOcorrencia.component';
+import { RegistaOcorrenciaService } from './registaOcorrencia/registaOcorrencia.service';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { RegistaAtividadeService } from './registaAtividade/registaAtividade.ser
         CentralPageComponent,
         RegistaCriancaComponent,
         RegistaAtividadeComponent,
+        RegistaOcorrenciaComponent,
     ],
     imports: [
         BrowserModule,
@@ -37,7 +40,7 @@ import { RegistaAtividadeService } from './registaAtividade/registaAtividade.ser
         CommonModule,
         ReactiveFormsModule,
     ],
-    providers: [AuthService, ErrorService, CentralPageService, RegistaCriancaService,RegistaAtividadeService, LoggedInGuard],
+    providers: [AuthService, ErrorService, CentralPageService, RegistaCriancaService,RegistaAtividadeService,RegistaOcorrenciaService, LoggedInGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

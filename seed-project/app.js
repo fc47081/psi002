@@ -9,6 +9,7 @@ var appRoutes = require('./routes/app');
 var userRoutes = require('./routes/user');
 var criancaRoutes = require('./routes/crianca');
 var atividadeRoutes = require('./routes/atividade');
+var ocorrenciaRoutes = require('./routes/ocorrencia');
 
 var app = express();
 // connecta a mongoDB
@@ -42,6 +43,9 @@ app.use('/crianca', criancaRoutes);
 
 //criação da atividade
 app.use('/atividade', atividadeRoutes);
+
+//criação da ocorrencia
+app.use('/ocorrencia', ocorrenciaRoutes);
 
 //qualquer pedido vai para a var appRoutes
 app.use('/', appRoutes);
