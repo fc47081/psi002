@@ -41,7 +41,7 @@ export class RegistaOcorrenciaComponent implements OnInit {
             local_ocorrencia: new FormControl(null, Validators.required),
             crianca_associada: new FormControl(null, Validators.required),
             turno: new FormControl(null,Validators.required),            
-            descricao: new FormControl(null,Validators.required),
+            descricao: new FormControl(null,Validators.required)
             })
     }
 }
