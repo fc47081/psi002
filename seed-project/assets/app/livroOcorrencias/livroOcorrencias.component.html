@@ -1,0 +1,67 @@
+<!--table-->
+<div class="grid-container" style="margin: 5%;outline-color: #00A0AF;">
+
+  <div class="item1">Descrição Geral Do Turno</div>
+  <div class="item2"></div>
+  <div class="item3">Incidentes</div>  
+  <div class="item4">Positivos</div>
+  <div class="item5">Críticos</div>
+  <div class="item6">Saúde</div>
+  <div class="item7"></div>
+  <div class="item8"></div>
+  <div class="item9"></div>
+  <div class="item10">Informação Para Cuidadores/Técnicos</div>
+  <div class="item11">Escola</div>
+  <div class="item12">Saúde</div>
+  <div class="item13">Outros</div>
+  <div class="item14"></div>
+  <div class="item15"></div>
+  <div class="item16"></div>
+
+</div>
+
+<style>
+.item1 { grid-area: header1;}
+.item2 { grid-area: content1; min-height: 100px;}
+.item3 { grid-area: header2; }
+.item4 { grid-area: header3; }
+.item5 { grid-area: header4; }
+.item6 { grid-area: header5; }
+.item7 { grid-area: content2; min-height: 100px;}
+.item8 { grid-area: content3; min-height: 100px;}
+.item9 { grid-area: content4; min-height: 100px;}
+.item10 { grid-area: header6; }
+.item11 { grid-area: header7; }
+.item12 { grid-area: header8; }
+.item13 { grid-area: header9; }
+.item14 { grid-area: content5; min-height: 100px;}
+.item15 { grid-area: content6; min-height: 100px;}
+.item16 { grid-area: content7; min-height: 100px;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header1 header1 header1'
+    'content1 content1 content1'
+    'header2 header2 header2'
+    'header3 header4 header5'
+    'content2 content3 content4'
+    'header6 header6 header6'
+    'header7 header8 header9'
+    'content5 content6 content7';
+  grid-gap: 10px;
+  background-color: #00A0AF;
+  border-radius:5px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  border-radius: 5px;
+
+}
+
+</style>

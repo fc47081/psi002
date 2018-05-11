@@ -7,6 +7,8 @@ import { RegistaCriancaComponent } from "./registaCrianca/registaCrianca.compone
 import { LoggedInGuard } from "./logged-in.guard";
 import { RegistaAtividadeComponent } from "./registaAtividade/registaAtividade.component";
 import { RegistaOcorrenciaComponent } from "./registaOcorrencia/registaOcorrencia.component";
+import { LivroOcorrenciasComponent } from "./livroOcorrencias/livroOcorrencias.component";
+
 
 const APP_ROUTES: Routes =  [
     { path: '', redirectTo: '/centralPage', pathMatch: 'full' },
@@ -15,6 +17,7 @@ const APP_ROUTES: Routes =  [
     { path: 'registaCrianca', component: RegistaCriancaComponent, canActivate: [LoggedInGuard]},
     { path: 'registaAtividade', component: RegistaAtividadeComponent, canActivate: [LoggedInGuard]},  
     { path: 'registaOcorrencia', component: RegistaOcorrenciaComponent , canActivate: [LoggedInGuard]},
+    { path: 'livroOcorrencias', component: LivroOcorrenciasComponent , canActivate: [LoggedInGuard]},
     { path: '**', redirectTo: '/centralPage' }
 ];
 

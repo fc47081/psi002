@@ -20,6 +20,8 @@ import { RegistaAtividadeComponent } from './registaAtividade/registaAtividade.c
 import { RegistaAtividadeService } from './registaAtividade/registaAtividade.service';
 import { RegistaOcorrenciaComponent } from './registaOcorrencia/registaOcorrencia.component';
 import { RegistaOcorrenciaService } from './registaOcorrencia/registaOcorrencia.service';
+import { LivroOcorrenciasComponent } from './livroOcorrencias/livroOcorrencias.component';
+import { LivroOcorrenciasService } from './livroOcorrencias/livroOcorrencias.service';
 
 @NgModule({
     declarations: [
@@ -31,6 +33,7 @@ import { RegistaOcorrenciaService } from './registaOcorrencia/registaOcorrencia.
         RegistaCriancaComponent,
         RegistaAtividadeComponent,
         RegistaOcorrenciaComponent,
+        LivroOcorrenciasComponent,
     ],
     imports: [
         BrowserModule,
@@ -39,7 +42,7 @@ import { RegistaOcorrenciaService } from './registaOcorrencia/registaOcorrencia.
         CommonModule,
         ReactiveFormsModule,
     ],
-    providers: [AuthService, ErrorService, CentralPageService, RegistaCriancaService,RegistaAtividadeService,RegistaOcorrenciaService, LoggedInGuard],
+    providers: [AuthService, ErrorService, CentralPageService, RegistaCriancaService,RegistaAtividadeService,RegistaOcorrenciaService,LivroOcorrenciasService, LoggedInGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {
