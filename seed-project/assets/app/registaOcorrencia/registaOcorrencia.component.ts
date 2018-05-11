@@ -3,16 +3,18 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {RegistaOcorrenciaService} from "./registaOcorrencia.service";    
 import {Router} from "@angular/router";
 import { Ocorrencia } from "./ocorrencia.model";
+import { RegistaCriancaService } from "../registaCrianca/registaCrianca.service";
+import { Criancas } from "../registaCrianca/crianca.model";
 
 @Component({
     selector: 'regista-ocorrencia',
     templateUrl: './registaOcorrencia.component.html'
 })
 export class RegistaOcorrenciaComponent implements OnInit {
+    criancas: Criancas[];
     myForm: FormGroup;
 
-    constructor(private registaOcorrenciaService: RegistaOcorrenciaService, private router: Router) {}
-    
+    constructor(private registaOcorrenciaService: RegistaOcorrenciaService, private registaCriancaService: RegistaCriancaService,private router: Router) {}
     onSubmit() {
         const ocorrencia = new Ocorrencia(
             this.myForm.value.data_ocorrencia,
@@ -43,5 +45,14 @@ export class RegistaOcorrenciaComponent implements OnInit {
             turno: new FormControl(null,Validators.required),            
             descricao: new FormControl(null,Validators.required)
             })
+
+
+            this.registaCriancaService.getCriancas()
+            .subscribe(
+                (criancas: Criancas[]) => {
+                    this.criancas = criancas;
+                }
+            );
     }
-}
+    }
+

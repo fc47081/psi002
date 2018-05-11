@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Ocorrencia = require('../models/ocorrencia');
+var Crianca = require('../models/criancas');
 
 router.post('/', function (req, res, next) {
     var ocorrencia = new Ocorrencia({

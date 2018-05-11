@@ -67,9 +67,7 @@
             <div class="form-group">
                 <label for="crianca_associada">Criança Associada</label>
                 <select type="text" id="crianca_associada" class="form-control" formControlName="crianca_associada">
-                        <option> </option>
-                        <option>Masculino</option>
-                        <option>Feminino</option>
+                    <option *ngFor= "let crianca of criancas" [value]="crianca.nome">{{crianca.nome}}</option>
                 </select>
             </div>
 
