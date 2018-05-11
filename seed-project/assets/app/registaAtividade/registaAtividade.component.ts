@@ -3,15 +3,19 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {RegistaAtividadeService} from "./registaAtividade.service";    
 import {Router} from "@angular/router";
 import { Atividade } from "./atividade.model";
+import { RegistaCriancaService } from "../registaCrianca/registaCrianca.service";
+import { Criancas } from "../registaCrianca/crianca.model";
 
 @Component({
     selector: 'regista-atividade',
     templateUrl: './registaAtividade.component.html'
 })
 export class RegistaAtividadeComponent implements OnInit {
+    criancas: Criancas[];
     myForm: FormGroup;
 
-    constructor(private registaAtividadeService: RegistaAtividadeService, private router: Router) {}
+    constructor(private registaAtividadeService: RegistaAtividadeService, private registaCriancaService: RegistaCriancaService,
+                     private router: Router) {}
 
     onSubmit() {
         const atividade = new Atividade(
@@ -42,5 +46,13 @@ export class RegistaAtividadeComponent implements OnInit {
             crianca_associada: new FormControl(null, Validators.required),
             turno: new FormControl(null,Validators.required)
             })
+
+            this.registaCriancaService.getCriancas()
+            .subscribe(
+                (criancas: Criancas[]) => {
+                    this.criancas = criancas;
+                }
+            );
     }
+    
 }

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Atividade = require('../models/atividade');
+var Crianca = require('../models/criancas');
 
 router.post('/', function (req, res, next) {
     var atividade = new Atividade({
