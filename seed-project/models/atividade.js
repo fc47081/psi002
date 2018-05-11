@@ -6,7 +6,6 @@ var schema = new Schema({
     tipo_da_atividade: { type: String },
     local_atividade: { type: String },
     crianca_associada: { type: String },
-    turno: { type: String },
     responsavel: { type: String },
     check: {type: Boolean}
 

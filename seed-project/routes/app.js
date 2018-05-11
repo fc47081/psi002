@@ -57,7 +57,6 @@ router.post('/', function (req, res, next) {
         tipo_da_atividade: req.body.tipo_da_atividade,
         local_atividade: req.body.local_atividade,
         crianca_associada: req.body.crianca_associada,
-        turno: req.body.turno,
         responsavel: req.body.responsavel,
         check: req.body.check
     });
@@ -99,20 +98,5 @@ router.post('/', function (req, res, next) {
     });
 });
 
-router.get('/', function (req, res, next) {
-    Crianca.find()
-        .exec(function (err, criancas) {
-            if (err) {
-                return res.status(500).json({
-                    title: 'An error occurred',
-                    error: err
-                });
-            }
-            res.status(200).json({
-                message: 'Success',
-                obj: criancas
-            });
-        });
-});
 
 module.exports = router;

@@ -43,8 +43,7 @@ export class RegistaAtividadeComponent implements OnInit {
             data_atividade: new FormControl(null, Validators.required),
             tipo_atividade: new FormControl(null, Validators.required),
             local_atividade: new FormControl(null, Validators.required),
-            crianca_associada: new FormControl(null, Validators.required),
-            turno: new FormControl(null,Validators.required)
+            crianca_associada: new FormControl(null, Validators.required)
             })
 
             this.registaCriancaService.getCriancas()
