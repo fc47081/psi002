@@ -1,25 +1,23 @@
-
 <div class="w3-container">
 
-    <div class="col-md-10 col-md-offset-1 main" style="height:670px; background-color: powderblue;" >
-            <div class="col-md-6 left-side" style="height:670px;">
+    <div class="col-md-10 col-md-offset-1 main" style="background-color: powderblue;" >
+            <div class="col-md-6 left-side">
                 
                 <div class="w3-container">
                     <br>
                     <div class="w3-row" style="margin-top: 60px">
                         <div class="w3-third w3-padding w3-mobile">
-                            <img src="http://diretorio.sector3.pt/Repository/Images/Logos/3f736a31-c1fd-47d2-88e5-c5e7b74bf8e0.jpg" height="250" width="300" class="center" alt="mimar logo failed">
+                            <img src="http://diretorio.sector3.pt/Repository/Images/Logos/3f736a31-c1fd-47d2-88e5-c5e7b74bf8e0.jpg" height="200" width="250" class="center" alt="mimar logo failed">
                         </div>
                         <div class="w3-third w3-padding w3-mobile" style="margin-top: 2%">
-                            <img src="http://localhost:3000/images/Cat2.jpg" height="250" width="300" class="center" alt="mimar">
+                            <img src="http://localhost:3000/images/Cat2.jpg" height="200" width="250" class="center" alt="mimar">
                         </div>
                     </div>
                     <br>
                 </div>
                 
             </div><!--col-sm-6-->
-            
-            <div class="col-md-6 right-side" style="height:670px;">
+            <div class="col-md-6 right-side" style="overflow-y:auto;">
             <h3>Registar Ocorrencia</h3>
 
 <div class="form">
@@ -34,21 +32,35 @@
         </div>
 
         <div class="form-group">
-                <label for="tipo">Tipo</label>
-                <select type="text" id="tipo" class="form-control" formControlName="tipo">
-                        <option> </option>
-                        <option>Masculino</option>
-                        <option>Feminino</option>
-                </select>
-            </div>
+            <label for="tipo">Tipo</label>
+            <select type="text" id="tipo" class="form-control" formControlName="tipo">
+                    <option> </option>
+                    <option>Positivos</option>
+                    <option>Críticos</option>
+                    <option>Saúde</option>
+                    <option>Escola</option>
+                    <option>Outros</option>
+            </select>
+        </div>
            
 
             <div class="form-group">
                 <label for="local_ocorrencia">Local da Ocorrencia</label>
                 <select type="text" id="local_ocorrencia" class="form-control" formControlName="local_ocorrencia">
                         <option> </option>
-                        <option>Masculino</option>
-                        <option>Feminino</option>
+                        <option>Hall de Entrada</option>
+                        <option>Sala(s) Comum(s)</option>
+                        <option>Quarto Branco</option>
+                        <option>Quarto Rosa</option>
+                            <option>Quarto Laranja</option>
+                            <option>Quarto Verde</option>
+                            <option>Quarto Amarelo</option>
+                            <option>Cozinha</option>
+                            <option>Jardim</option>
+                            <option>Corredores</option>
+                            <option>Casa(s) de Banho</option>
+                            <option>Hospital</option>
+                            <option>Campo de Futebol</option>
                 </select>
             </div>
 
@@ -67,8 +79,10 @@
                         <option> </option>
                         <option>Manhã</option>
                         <option>Tarde</option>
+                        <option>Noite</option>
                 </select>
             </div>
+
             
             <div class="form-group">
                 <label for="descricao">Descrição</label>
