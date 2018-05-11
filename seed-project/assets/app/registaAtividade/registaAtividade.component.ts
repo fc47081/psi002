@@ -31,7 +31,7 @@ export class RegistaAtividadeComponent implements OnInit {
                 data => {
                     console.log(data),
                     window.alert("Atividade registada com sucesso!");
-                    this.router.navigateByUrl('centralPage');
+                    this.router.navigateByUrl('registaAtividade');
                 },
                 error => console.log(error)
             );
