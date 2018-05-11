@@ -21,7 +21,6 @@ import { RegistaAtividadeService } from './registaAtividade/registaAtividade.ser
 import { RegistaOcorrenciaComponent } from './registaOcorrencia/registaOcorrencia.component';
 import { RegistaOcorrenciaService } from './registaOcorrencia/registaOcorrencia.service';
 
-
 @NgModule({
     declarations: [
         AppComponent,

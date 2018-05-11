@@ -7,7 +7,8 @@ var schema = new Schema({
     local_atividade: { type: String },
     crianca_associada: { type: String },
     turno: { type: String },
-    responsavel: { type: String }
+    responsavel: { type: String },
+    check: {type: Boolean}
 
 });
 module.exports = mongoose.model('Atividades', schema);

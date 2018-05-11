@@ -19,8 +19,8 @@ export class RegistaAtividadeComponent implements OnInit {
             this.myForm.value.tipo_atividade,
             this.myForm.value.local_atividade,
             this.myForm.value.crianca_associada,
-            this.myForm.value.turno,
             localStorage.getItem('userId'),
+            false,
         );
         this.registaAtividadeService.register(atividade)
             .subscribe(

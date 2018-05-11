@@ -57,7 +57,8 @@ router.post('/', function (req, res, next) {
         local_atividade: req.body.local_atividade,
         crianca_associada: req.body.crianca_associada,
         turno: req.body.turno,
-        responsavel: req.body.responsavel
+        responsavel: req.body.responsavel,
+        check: req.body.check
     });
     atividade.save(function (err, result) {
         if (err) {
