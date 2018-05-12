@@ -1,6 +1,6 @@
 <div class="w3-container">
 
-    <div class="col-md-10 col-md-offset-1 main" style="background-color: powderblue;" >
+    <div class="col-md-10 col-md-offset-1 main" style="background-color: powderblue; width: 87%;" >
             <div class="col-md-6 left-side" style="overflow-y:auto;">
                 
                 <h3>Lista de Atividades</h3>
@@ -12,11 +12,11 @@
                 <!--Table head-->
                 <thead>
                     <tr>
-                        <th></th>
                         <th>Tipo</th>
                         <th>Data</th>
                         <th>Criança</th>
                         <th>Local</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <!--Table head-->
@@ -24,11 +24,12 @@
                 <!--Table body-->
                 <tbody>
                     <tr *ngFor= "let atividade of atividades">
-                        <td><input type="button" value="X" class="btn btn-primary" (click)="delete(atividade._id)"/></td>
                         <td>{{atividade.tipo_da_atividade}}</td>
                         <td>{{atividade.data_atividade | date : "dd/MM/yyyy 'at' h:mma"}}</td>
                         <td>{{atividade.crianca_associada}}</td>
                         <td>{{atividade.local_atividade}}</td>
+                        <td><input type="button" value="X" class="btn btn-primary" 
+                            style="background-color: red;" (click)="delete(atividade._id)"/></td>
                     </tr>
                 </tbody>
                 <!--Table body-->

@@ -25,5 +25,10 @@ export class RegistaAtividadeService {
             })
             .catch((error: Response) => Observable.throw(error.json()));
     }
-    
+
+    deleteAtividades(id) {
+        return this.http.delete('http://localhost:3000/atividade/' + id)
+        .map((response: Response) => response.json())
+        .catch((error: Response) => Observable.throw(error.json()));
+    } 
 }

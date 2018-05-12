@@ -62,4 +62,13 @@ export class RegistaAtividadeComponent implements OnInit {
             );
     }
     
+    delete(id){
+        this.registaAtividadeService.deleteAtividades(id).subscribe(
+            data => {
+                window.alert("Atividade eliminada com sucesso!");
+                window.location.reload();
+            },
+            error => console.log(error)
+        );
+    }
 }

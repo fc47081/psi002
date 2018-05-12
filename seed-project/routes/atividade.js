@@ -41,4 +41,27 @@ router.get('/', function (req, res, next) {
         });
 });
 
+router.delete('/:id', function (req, res) {
+    Atividade.findById(req.params.id, function (err, atividade) {
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        atividade.remove(function (err, result) {
+            if (err) {
+                return res.status(500).json({
+                    title: 'An error occurred',
+                    error: err
+                });
+            }
+            res.status(200).json({
+                atividade: 'Atividade eliminada com sucesso!',
+                obj: result
+            });
+        });
+    });
+});
+
 module.exports = router;
