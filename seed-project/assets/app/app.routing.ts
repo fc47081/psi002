@@ -15,7 +15,7 @@ const APP_ROUTES: Routes =  [
     { path: 'auth', component: AuthenticationComponent, loadChildren: './auth/auth.module#AuthModule' },
     { path: 'centralPage', component: CentralPageComponent, canActivate: [LoggedInGuard]},
     { path: 'registaCrianca', component: RegistaCriancaComponent, canActivate: [LoggedInGuard]},
-    { path: 'registaAtividade', component: RegistaAtividadeComponent, canActivate: [LoggedInGuard]},  
+    { path: 'atividades', component: RegistaAtividadeComponent, canActivate: [LoggedInGuard]},  
     { path: 'registaOcorrencia', component: RegistaOcorrenciaComponent , canActivate: [LoggedInGuard]},
     { path: 'livroOcorrencias', component: LivroOcorrenciasComponent , canActivate: [LoggedInGuard]},
     { path: '**', redirectTo: '/centralPage' }
