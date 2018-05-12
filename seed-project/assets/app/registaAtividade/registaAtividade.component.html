@@ -1,13 +1,13 @@
 <div class="w3-container">
 
     <div class="col-md-10 col-md-offset-1 main" style="background-color: powderblue;" >
-            <div class="col-md-6 left-side">
+            <div class="col-md-6 left-side" style="overflow-y:auto;">
                 
                 <h3>Lista de Atividades</h3>
             <br>
-            <div class="w3-container" style=" overflow-y: scroll; height: 100%; width: 100%;">
+            <div class="w3-container">
                 <!--Table-->
-            <table class="table table-bordered table-responsive-md" >
+            <table class="table">
 
                 <!--Table head-->
                 <thead>
@@ -23,45 +23,12 @@
 
                 <!--Table body-->
                 <tbody>
-                    <tr>
-                        <th scope="row" class="pr-md-3 pr-5">
-                            <input type="checkbox" class="filled-in" id="checkbox100">
-                            <label for="checkbox100" class="label-table"></label>
-                        </th>
-                        <td>Dar Medicamentos</td>
-                        <td>22/02/2103</td>
-                        <td>O Puto</td>
-                        <td>Na cantina</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="pr-md-3 pr-5">
-                            <input type="checkbox" class="filled-in" id="checkbox101">
-                            <label for="checkbox101" class="label-table"></label>
-                        </th>
-                        <td>Dar Medicamentos</td>
-                        <td>22/02/2103</td>
-                        <td>O Puto</td>
-                        <td>Na cantina</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="pr-md-3 pr-5">
-                            <input type="checkbox" class="filled-in" id="checkbox102">
-                            <label for="checkbox102" class="label-table"></label>
-                        </th>
-                        <td>Dar Medicamentos</td>
-                        <td>22/02/2103</td>
-                        <td>O Puto</td>
-                        <td>Na cantina</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="pr-md-3 pr-5">
-                            <input type="checkbox" class="filled-in" id="checkbox103">
-                            <label for="checkbox103" class="label-table"></label>
-                        </th>
-                        <td>Dar Medicamentos</td>
-                        <td>22/02/2103</td>
-                        <td>O Puto</td>
-                        <td>Na cantina</td>
+                    <tr *ngFor= "let atividade of atividades">
+                        <td><input type="button" value="X" class="btn btn-primary" (click)="delete(atividade._id)"/></td>
+                        <td>{{atividade.tipo_da_atividade}}</td>
+                        <td>{{atividade.data_atividade | date : "dd/MM/yyyy 'at' h:mma"}}</td>
+                        <td>{{atividade.crianca_associada}}</td>
+                        <td>{{atividade.local_atividade}}</td>
                     </tr>
                 </tbody>
                 <!--Table body-->
@@ -172,7 +139,7 @@ background-size:cover;
 .left-side h3{
 font-size: 30px;
 font-weight: 900;
-color:#FFF;
+color:black;
 padding: 50px 10px 00px 26px;
 }
 
@@ -245,5 +212,23 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 width: 50%;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: white}
+
+th {
+    background-color: black;
+    color: white;
 }
 </style>

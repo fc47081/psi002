@@ -78,11 +78,8 @@
             
             <div class="form-group">
                 <label for="descricao">Descrição</label>
-                <select type="text" id="descricao" class="form-control" formControlName="descricao">
-                        <option> </option>
-                        <option>Manhã</option>
-                        <option>Tarde</option>
-                </select>
+                <textarea ng-model="textareaModel"  id="descricao" class="form-control"
+                 formControlName="descricao" style="margin: 0px; width: 345px; height: 100px;"></textarea>
             </div>
     
         <button

@@ -6,6 +6,7 @@ import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class RegistaAtividadeService {
+    atividades: Atividade[];
     constructor(private http: Http) {}
 
     register(atividade: Atividade) {
@@ -13,6 +14,15 @@ export class RegistaAtividadeService {
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post('http://localhost:3000/atividade', body, {headers: headers})
             .map((response: Response) => response.json())
+            .catch((error: Response) => Observable.throw(error.json()));
+    }
+
+    getAtividades() {
+        return this.http.get('http://localhost:3000/atividade')
+            .map((response: Response) => {
+                const atividades = response.json().obj;
+                return atividades;
+            })
             .catch((error: Response) => Observable.throw(error.json()));
     }
     

@@ -12,6 +12,7 @@ import { Criancas } from "../registaCrianca/crianca.model";
 })
 export class RegistaAtividadeComponent implements OnInit {
     criancas: Criancas[];
+    atividades: Atividade[];
     myForm: FormGroup;
 
     constructor(private registaAtividadeService: RegistaAtividadeService, private registaCriancaService: RegistaCriancaService,
@@ -31,7 +32,7 @@ export class RegistaAtividadeComponent implements OnInit {
                 data => {
                     console.log(data),
                     window.alert("Atividade registada com sucesso!");
-                    this.router.navigateByUrl('registaAtividade');
+                    window.location.reload();
                 },
                 error => console.log(error)
             );
@@ -50,6 +51,13 @@ export class RegistaAtividadeComponent implements OnInit {
             .subscribe(
                 (criancas: Criancas[]) => {
                     this.criancas = criancas;
+                }
+            );
+
+            this.registaAtividadeService.getAtividades()
+            .subscribe(
+                (atividades: Atividade[]) => {
+                    this.atividades = atividades;
                 }
             );
     }

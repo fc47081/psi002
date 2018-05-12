@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var Atividade = require('../models/atividade');
-var Crianca = require('../models/criancas');
 
 router.post('/', function (req, res, next) {
     var atividade = new Atividade({
@@ -24,6 +23,22 @@ router.post('/', function (req, res, next) {
             obj: result
         });
     });
+});
+
+router.get('/', function (req, res, next) {
+    Atividade.find()
+        .exec(function (err, atividades) {
+            if (err) {
+                return res.status(500).json({
+                    title: 'An error occurred',
+                    error: err
+                });
+            }
+            res.status(200).json({
+                message: 'Success',
+                obj: atividades
+            });
+        });
 });
 
 module.exports = router;

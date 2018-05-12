@@ -41,82 +41,11 @@
   <!-- Page content -->
   <div class="w3-container" style="width: 60%; height: 80%; position: fixed; margin: auto; overflow: auto; margin-top: 2%; margin-left: 10%; margin-right: 15%; margin-bottom: 15%">
     <ul class="w3-ul w3-card-4" style="background-color: white;">
-      <li class="w3-bar">
+      <li class="w3-bar" *ngFor= "let crianca of criancas">
         <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
         <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
-        </div>
-      </li>
-  
-      <li class="w3-bar">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Mike</span><br>
-          <span>Web Designer</span>
+          <span class="w3-large">{{crianca.nome}}</span><br>
+          <span> Data de Entrada: {{crianca.data_de_entrada | date : "dd/MM/yyyy"}}</span>
         </div>
       </li>
     </ul>
