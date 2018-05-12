@@ -27,4 +27,19 @@ router.post('/', function (req, res, next) {
     });
 });
 
+router.get('/:turno/:dataOcorrencia', function (req, res) {
+    Ocorrencia.find({turno: req.params.turno , data_ocorrencia: req.params.dataOcorrencia}).exec(function (err, ocorrencias) {
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        res.status(200).json({
+            message: 'Success',
+            obj: ocorrencias
+        });
+    });
+});
+
 module.exports = router;

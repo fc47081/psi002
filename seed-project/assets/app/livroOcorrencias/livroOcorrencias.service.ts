@@ -7,4 +7,13 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class LivroOcorrenciasService {
 	constructor(private http: Http) {}
+
+	getOcorrencias(ocorrencia) {
+		return this.http.get('http://localhost:3000/ocorrencia/' + ocorrencia.turno + '/' + ocorrencia.data_ocorrencia)
+            .map((response: Response) => {
+                const ocorrencias = response.json().obj;
+                return ocorrencias;
+            })
+            .catch((error: Response) => Observable.throw(error.json()));
+    }
 }

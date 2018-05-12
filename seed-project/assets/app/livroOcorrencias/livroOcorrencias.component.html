@@ -1,67 +1,200 @@
-<!--table-->
-<div class="grid-container" style="margin: 5%;outline-color: #00A0AF;">
+<div class="w3-container">
 
-  <div class="item1">Descrição Geral Do Turno</div>
-  <div class="item2"></div>
-  <div class="item3">Incidentes</div>  
-  <div class="item4">Positivos</div>
-  <div class="item5">Críticos</div>
-  <div class="item6">Saúde</div>
-  <div class="item7"></div>
-  <div class="item8"></div>
-  <div class="item9"></div>
-  <div class="item10">Informação Para Cuidadores/Técnicos</div>
-  <div class="item11">Escola</div>
-  <div class="item12">Saúde</div>
-  <div class="item13">Outros</div>
-  <div class="item14"></div>
-  <div class="item15"></div>
-  <div class="item16"></div>
+    <div class="col-md-10 col-md-offset-1 main" style="background-color: powderblue;" >
+            <div class="col-md-8 left-side" style="overflow-y:auto;">
+                
+                <h3>Lista de Ocorrências</h3>
+            <br>
+            <div class="w3-container">
+                <!--Table-->
+                <table class="table">
+
+                    <!--Table head-->
+                    <thead>
+                        <tr>
+                            <th>Data da Ocorrência</th>
+                            <th>Turno</th>
+                            <th>Tipo da Ocorrência</th>
+                            <th>Local da Ocorrência</th>
+                            <th>Criança</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <!--Table head-->
+                
+                    <!--Table body-->
+                    <tbody>
+                        <tr *ngFor= "let ocorrencia of ocorrencias">
+                            <td>{{ocorrencia.data_ocorrencia | date : "dd/MM/yyyy"}}</td>
+                            <td>{{ocorrencia.turno}}</td>
+                            <td>{{ocorrencia.tipo}}</td>
+                            <td>{{ocorrencia.local_ocorrencia}}</td>
+                            <td>{{ocorrencia.crianca_associada}}</td>
+                            <td>{{ocorrencia.descricao}}</td>
+                        </tr>
+                    </tbody>
+                    <!--Table body-->
+                
+                </table>
+            <!--Table-->
+            </div>
+            <br>
+                
+            </div><!--col-sm-6-->
+            
+            <div class="col-md-4 right-side">
+            <h3>Consulta Ocorrências</h3>
+
+<div class="form">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="data_ocorrencia">Data da Ocorrência</label>
+                <input
+                        type="date"
+                        id="data_ocorrencia"
+                        class="form-control"
+                        formControlName="data_ocorrencia">
+            </div>
+
+            <div class="form-group">
+                <label for="turno">Turno</label>
+                <select type="text" id="turno" class="form-control" formControlName="turno">
+                        <option> </option>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                </select>
+            </div>
+
+            <button
+            style="background-color: black; font-size: 18px;"
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!myForm.valid">Pesquisar</button>
+          
+</form>
 
 </div>
 
 <style>
-.item1 { grid-area: header1;}
-.item2 { grid-area: content1; min-height: 100px;}
-.item3 { grid-area: header2; }
-.item4 { grid-area: header3; }
-.item5 { grid-area: header4; }
-.item6 { grid-area: header5; }
-.item7 { grid-area: content2; min-height: 100px;}
-.item8 { grid-area: content3; min-height: 100px;}
-.item9 { grid-area: content4; min-height: 100px;}
-.item10 { grid-area: header6; }
-.item11 { grid-area: header7; }
-.item12 { grid-area: header8; }
-.item13 { grid-area: header9; }
-.item14 { grid-area: content5; min-height: 100px;}
-.item15 { grid-area: content6; min-height: 100px;}
-.item16 { grid-area: content7; min-height: 100px;}
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header1 header1 header1'
-    'content1 content1 content1'
-    'header2 header2 header2'
-    'header3 header4 header5'
-    'content2 content3 content4'
-    'header6 header6 header6'
-    'header7 header8 header9'
-    'content5 content6 content7';
-  grid-gap: 10px;
-  background-color: #00A0AF;
-  border-radius:5px;
-  padding: 10px;
-}
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 10px 0;
-  font-size: 18px;
-  border-radius: 5px;
+#playground-container {
+height: 500px;
+overflow: hidden !important;
 
 }
+.main{margin-top:70px; 
+-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+padding:0px;
+background:#2196f3;
+}
+.fb:focus, .fb:hover{color:FFF !important;}
+body{
+font-family: 'Raleway', sans-serif;
+}
 
+.left-side{
+padding:0px 0px 0px;
+height: 550px;
+background-size:cover;
+}
+.left-side h3{
+font-size: 30px;
+font-weight: 900;
+color:black;
+padding: 50px 10px 00px 26px;
+}
+
+.left-side p{
+font-weight:700;
+color:#FFF;
+padding:10px 10px 10px 26px;
+}
+
+
+.fb{background: #2d6bb7;
+color: #FFF;
+padding: 10px 15px;
+border-radius: 18px;
+font-size: 12px;
+font-weight: 600;
+margin-right: 15px;
+margin-left:26px;-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);}
+.tw{background: #20c1ed;
+color: #FFF;
+padding: 10px 15px;
+border-radius: 18px;
+font-size: 12px;
+font-weight: 600;
+margin-right: 15px;-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);}
+
+.right-side{
+padding:0px 0px 0px;
+background:#FFF;
+background-size:cover;
+min-height:514px;
+height: 550px;
+}
+.right-side h3{
+font-size: 30px;
+font-weight: 700;
+color:#000;
+padding: 50px 10px 00px 50px;
+}
+.right-side p{
+font-weight:600;
+color:#000;
+padding:10px 50px 10px 50px;
+}
+.form{padding:10px 50px 10px 50px;}
+.form-control{box-shadow: none !important;
+border-radius: 0px !important;
+border-bottom: 1px solid #2196f3 !important;
+border-top: 1px !important;
+border-left: none !important;
+border-right: none !important;}
+.btn-deep-purple {
+background: #2196f3;
+border-radius: 18px;
+padding: 5px 19px;
+color: #FFF;
+font-weight: 600;
+float: right;
+-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.24);
+}
+
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: white}
+
+th {
+    background-color: black;
+    color: white;
+}
 </style>
