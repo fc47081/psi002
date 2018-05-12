@@ -3,6 +3,21 @@ var router = express.Router();
 var Ocorrencia = require('../models/ocorrencia');
 var Crianca = require('../models/criancas');
 
+router.get('/', function (req, res) {
+    Ocorrencia.find().exec(function (err, ocorrencias) {
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        res.status(200).json({
+            message: 'Success',
+            obj: ocorrencias
+        });
+    });
+});
+
 router.post('/', function (req, res, next) {
     var ocorrencia = new Ocorrencia({
         data_ocorrencia:req.body.data_ocorrencia,

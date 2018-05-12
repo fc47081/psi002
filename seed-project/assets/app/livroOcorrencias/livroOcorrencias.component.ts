@@ -33,9 +33,7 @@ export class LivroOcorrenciasComponent implements OnInit{
                     }
                     localStorage.setItem("ocorrencias", JSON.stringify(data));
                     window.location.reload();
-                    console.log(data)
                 },
-                error => console.log(error)
             );
         this.myForm.reset();
     }
@@ -45,6 +43,15 @@ export class LivroOcorrenciasComponent implements OnInit{
             data_ocorrencia: new FormControl(null, Validators.required),
             turno: new FormControl(null, Validators.required)
         })
+
+        if(localStorage.getItem('ocorrencias') == null){
+            this.LivroOcorrenciasService.getAllOcorrencias()
+            .subscribe(
+                    (ocorrencias: Ocorrencia[]) => {
+                        this.ocorrencias = ocorrencias;
+                    }
+            );
+        }
 
         var retrievedObject = localStorage.getItem('ocorrencias');
         this.ocorrencias = JSON.parse(retrievedObject);

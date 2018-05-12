@@ -16,4 +16,13 @@ export class LivroOcorrenciasService {
             })
             .catch((error: Response) => Observable.throw(error.json()));
     }
+
+    getAllOcorrencias() {
+		return this.http.get('http://localhost:3000/ocorrencia')
+            .map((response: Response) => {
+                const ocorrencias = response.json().obj;
+                return ocorrencias;
+            })
+            .catch((error: Response) => Observable.throw(error.json()));
+    }
 }

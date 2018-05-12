@@ -8,8 +8,6 @@ import { HeaderComponent } from "./header.component";
 import { routing } from "./app.routing";
 import { AuthService } from "./auth/auth.service";
 import { CentralPageService } from "./centralPage/centralPage.service";
-import { ErrorComponent } from "./errors/error.component";
-import { ErrorService } from "./errors/error.service";
 import { CentralPageComponent } from "./centralPage/centralPage.component";
 import { RegistaCriancaService } from './registaCrianca/registaCrianca.service';
 import { RegistaCriancaComponent } from './registaCrianca/registaCrianca.component';
@@ -28,7 +26,6 @@ import { LivroOcorrenciasService } from './livroOcorrencias/livroOcorrencias.ser
         AppComponent,
         AuthenticationComponent,
         HeaderComponent,
-        ErrorComponent,
         CentralPageComponent,
         RegistaCriancaComponent,
         RegistaAtividadeComponent,
@@ -42,7 +39,7 @@ import { LivroOcorrenciasService } from './livroOcorrencias/livroOcorrencias.ser
         CommonModule,
         ReactiveFormsModule,
     ],
-    providers: [AuthService, ErrorService, CentralPageService, RegistaCriancaService,RegistaAtividadeService,RegistaOcorrenciaService,LivroOcorrenciasService, LoggedInGuard],
+    providers: [AuthService, CentralPageService, RegistaCriancaService,RegistaAtividadeService,RegistaOcorrenciaService,LivroOcorrenciasService, LoggedInGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

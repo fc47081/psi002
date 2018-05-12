@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Crianca } from '../models';
 import {MessageService} from "./messages/message.service";
 //import { CriancaService } from './crianca.service';
 //import { FuncionarioService } from './funcionario.service';
