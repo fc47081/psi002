@@ -46,9 +46,15 @@
         <div class="w3-bar-item">
           <span class="w3-large">{{crianca.nome}}</span><br>
           <span> Data de Entrada: {{crianca.data_de_entrada | date : "dd/MM/yyyy"}}</span>
+          <button
+          style="background-color: #00A0AF; font-size: 16px; align-content: center;"
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!myForm.valid">Informações Pessoais</button>
         </div>
       </li>
     </ul>
+    
   </div>
 
   <!-- Footer -->
