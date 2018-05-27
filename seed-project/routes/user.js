@@ -55,4 +55,19 @@ router.post('/signin', function (req, res, next) {
     });
 });
 
+router.get('/:id', function (req, res) {
+    User.find({_id: req.params.id}).exec(function (err, user) {
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        res.status(200).json({
+            message: 'Success',
+            obj: user
+        });
+    });
+});
+
 module.exports = router;

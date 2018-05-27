@@ -26,4 +26,13 @@ export class RegistaCriancaService {
             })
             .catch((error: Response) => Observable.throw(error.json()));
     }
+
+    getCriancaById(id) {
+        return this.http.get('http://localhost:3000/crianca/' + id)
+            .map((response: Response) => {
+                const crianca = response.json().obj;
+                return crianca;
+            })
+            .catch((error: Response) => Observable.throw(error.json()));
+    }
 }

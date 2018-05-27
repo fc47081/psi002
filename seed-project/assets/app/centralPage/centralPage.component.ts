@@ -5,6 +5,7 @@ import {CentralPageService} from "./centralPage.service";
 import { AuthService } from "../auth/auth.service";
 import { RegistaCriancaService } from "../registaCrianca/registaCrianca.service";
 import { Criancas } from "../registaCrianca/crianca.model";
+import { User } from "../auth/user.model";
 
 @Component({
     selector: 'app-centralPage',
@@ -13,6 +14,7 @@ import { Criancas } from "../registaCrianca/crianca.model";
 export class CentralPageComponent implements OnInit {
 
     criancas: Criancas[];
+    user: User;
     constructor(private authService: AuthService, private registaCriancaService: RegistaCriancaService, private router: Router) {}
 
     onLogout() {
@@ -27,5 +29,17 @@ export class CentralPageComponent implements OnInit {
                     this.criancas = criancas;
                 }
             );
+
+            this.authService.getUserById(localStorage.getItem('userId'))
+            .subscribe(
+                (user: User) => {
+                    this.user = user;
+                }
+            );
+    }
+
+    onSubmit(id) {
+        localStorage.setItem('criancaId', id);
+        this.router.navigateByUrl('editarDadosCrianca');
     }
 }

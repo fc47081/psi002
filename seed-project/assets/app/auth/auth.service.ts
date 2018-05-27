@@ -25,6 +25,15 @@ export class AuthService {
             .catch((error: Response) => Observable.throw(error.json()));
     }
 
+    getUserById(id) {
+        return this.http.get('http://localhost:3000/user/' + id)
+            .map((response: Response) => {
+                const user = response.json().obj;
+                return user;
+            })
+            .catch((error: Response) => Observable.throw(error.json()));
+    }
+
     logout() {
         localStorage.clear();
     }

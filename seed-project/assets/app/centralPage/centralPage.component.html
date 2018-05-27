@@ -27,13 +27,24 @@
       
     <div style="text-align: center">
 
-    <button class="btn btn-danger" (click)="onLogout()">Logout</button>
-
+    <div align="center">
+        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:100px">
+    </div>
     <h3 style="color: white; text-align: center;">
-       Bem Vindo!
-      </h3>
+       Bem Vindo! <br> <br>
+    </h3>
+
+    <h4 style="color: white">Informações Pessoais</h4>
+    <h5 style="color: white; text-align: left;" *ngFor= "let user of user">
+    <span> Nome: {{user.nome}}</span> <br>
+    <span> Estatuto: {{user.estatuto}}</span> <br>
+    <span> Idade: {{user.idade}} anos</span> <br>
+    </h5>
+
+    <button class="btn btn-primary">Editar Dados</button>
 
 
+    <button class="btn btn-danger" (click)="onLogout()">Logout</button>
     </div>
   </div>
 
@@ -47,9 +58,9 @@
           <span class="w3-large">{{crianca.nome}}</span><br>
           <span> Data de Entrada: {{crianca.data_de_entrada | date : "dd/MM/yyyy"}}</span>
           <button
-          style="background-color: #00A0AF; font-size: 16px; align-content: center;"
+          style="background-color: #00A0AF; font-size: 16px; align-content: right;"
           class="btn btn-primary"
-          type="submit">Informações Pessoais</button>
+          (click)="onSubmit(crianca._id)">Informações Pessoais</button>
         </div>
       </li>
     </ul>
