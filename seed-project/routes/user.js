@@ -70,4 +70,19 @@ router.get('/:id', function (req, res) {
     });
 });
 
+router.post('/:id', function (req, res, next) {
+    User.findByIdAndUpdate(req.params.id,{$set: req.body}, function(err, user){
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        res.status(200).json({
+            message: 'Updated User',
+            obj: user
+        });
+    });
+});
+
 module.exports = router;

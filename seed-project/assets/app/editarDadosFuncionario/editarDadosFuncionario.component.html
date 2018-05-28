@@ -41,7 +41,6 @@
                           <option> </option>
                           <option>Diretor(a)</option>
                           <option>Cuidador(a)</option>
-                          <option>Deus(a)</option>
                       </select>
                   </div>
                   <div class="form-group">
@@ -52,21 +51,14 @@
                     class="form-control"
                     formControlName="email">
                 </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input
-                    type="password"
-                    id="password"
-                    class="form-control"
-                    formControlName="password">
-                </div>
                 <button
                 style="background-color: black; font-size: 18px;"
                 class="btn btn-primary"
                 type="submit"
-                [disabled]="!myForm.valid">Registar</button>
+                [disabled]="!myForm.valid">Editar Dados</button>
                 
-                <a href="/auth/signin" class="btn btn-link" style="color: black">Cancelar</a>
+                <a href="/centralPage" class="btn btn-primary" style="background-color: black; font-size: 18px;">Voltar</a>
+
             </form>
         </div>
         <!--/Form with header-->
