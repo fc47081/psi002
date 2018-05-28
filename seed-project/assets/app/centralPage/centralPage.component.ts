@@ -42,4 +42,8 @@ export class CentralPageComponent implements OnInit {
         localStorage.setItem('criancaId', id);
         this.router.navigateByUrl('editarDadosCrianca');
     }
+
+    onSuperMegaClick(){
+        this.router.navigateByUrl('editarDadosFuncionario');
+    }
 }

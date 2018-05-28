@@ -9,6 +9,7 @@ import { RegistaAtividadeComponent } from "./registaAtividade/registaAtividade.c
 import { RegistaOcorrenciaComponent } from "./registaOcorrencia/registaOcorrencia.component";
 import { LivroOcorrenciasComponent } from "./livroOcorrencias/livroOcorrencias.component";
 import { EditarDadosCriancaComponent } from "./editarDadosCrianca/editarDadosCrianca.component";
+import { EditarDadosFuncionarioComponent } from "./editarDadosFuncionario/editarDadosFuncionario.component";
 
 
 const APP_ROUTES: Routes =  [
@@ -20,6 +21,7 @@ const APP_ROUTES: Routes =  [
     { path: 'registaOcorrencia', component: RegistaOcorrenciaComponent , canActivate: [LoggedInGuard]},
     { path: 'livroOcorrencias', component: LivroOcorrenciasComponent , canActivate: [LoggedInGuard]},
     { path: 'editarDadosCrianca', component: EditarDadosCriancaComponent , canActivate: [LoggedInGuard]},
+    { path: 'editarDadosFuncionario', component: EditarDadosFuncionarioComponent , canActivate: [LoggedInGuard]},
     { path: '**', redirectTo: '/centralPage' }
 ];
 

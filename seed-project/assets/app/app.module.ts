@@ -22,6 +22,8 @@ import { LivroOcorrenciasComponent } from './livroOcorrencias/livroOcorrencias.c
 import { LivroOcorrenciasService } from './livroOcorrencias/livroOcorrencias.service';
 import { EditarDadosCriancaComponent } from './editarDadosCrianca/editarDadosCrianca.component';
 import { EditarDadosCriancaService } from './editarDadosCrianca/editarDadosCrianca.service';
+import { EditarDadosFuncionarioService } from './editarDadosFuncionario/editarDadosFuncionario.service';
+import { EditarDadosFuncionarioComponent} from './editarDadosFuncionario/editarDadosFuncionario.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +36,7 @@ import { EditarDadosCriancaService } from './editarDadosCrianca/editarDadosCrian
         RegistaOcorrenciaComponent,
         LivroOcorrenciasComponent,
         EditarDadosCriancaComponent,
+        EditarDadosFuncionarioComponent,
     ],
     imports: [
         BrowserModule,
@@ -42,7 +45,7 @@ import { EditarDadosCriancaService } from './editarDadosCrianca/editarDadosCrian
         CommonModule,
         ReactiveFormsModule,
     ],
-    providers: [AuthService, CentralPageService, RegistaCriancaService,RegistaAtividadeService,RegistaOcorrenciaService,LivroOcorrenciasService, EditarDadosCriancaService, LoggedInGuard],
+    providers: [AuthService, CentralPageService, RegistaCriancaService,RegistaAtividadeService,RegistaOcorrenciaService,LivroOcorrenciasService, EditarDadosCriancaService, EditarDadosFuncionarioService, LoggedInGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {
