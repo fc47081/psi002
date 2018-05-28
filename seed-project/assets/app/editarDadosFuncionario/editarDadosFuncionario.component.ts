@@ -49,7 +49,6 @@ export class EditarDadosFuncionarioComponent implements OnInit {
             .subscribe(
                 (user: User) => {
                     this.user = user;
-                    console.log(user[0].password)
                     var datePipe = new DatePipe("en-US");
                     this.myForm.setValue({ 
                         nome: user[0].nome,
