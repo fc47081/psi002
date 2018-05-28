@@ -5,92 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-  <!-- Log out button -->
+<!-- Log out button -->
 
-  <!-- Sidebar LEFT -->
-  <div class="w3-sidebar w3-bar-block w3-collapse" style="display: none; background: #00A0AF; padding: 5px; width: 15%; position: fixed; left: 0;" id="mySidebar">
-    <h3 class="w3-bar-item">
-        <img class="logo" src="http://localhost:3000/images/favicon.jpeg" alt="mimar" style="width: 60%; height: 60%; margin-left: 30px; margin-top: 15px">
-    </h3>
-    <a href="/registaCrianca" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
-    " style="padding-top: 30px; padding-bottom: 30px; margin-top: 20px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Criança</a> 
-    <a href="/atividades" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
-    " style="padding-top: 30px; padding-bottom: 30px; margin-top: 5px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Actividades</a>
-    <a href="/registaOcorrencia" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
-    " style="padding-top: 30px; padding-bottom: 30px; margin-top: 5px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Ocorrência</a>
-    <a href="/livroOcorrencias" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
-    " style="padding-top: 30px; padding-bottom: 30px; margin-top: 5px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Livro de Ocorrências</a>
-  </div>
+<!-- Sidebar LEFT -->
+<div class="w3-sidebar w3-bar-block w3-collapse" style="display: none; background: #00A0AF; padding: 5px; width: 15%; position: fixed; left: 0;" id="mySidebar">
+  <h3 class="w3-bar-item">
+    <img class="logo" src="http://localhost:3000/images/favicon.jpeg" alt="mimar" style="width: 60%; height: 60%; margin-left: 30px; margin-top: 15px">
+  </h3>
+  <a href="/registaCrianca" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
+  " style="padding-top: 30px; padding-bottom: 30px; margin-top: 20px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Criança</a> 
+  <a href="/atividades" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
+  " style="padding-top: 30px; padding-bottom: 30px; margin-top: 5px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Actividades</a>
+  <a href="/registaOcorrencia" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
+  " style="padding-top: 30px; padding-bottom: 30px; margin-top: 5px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Registar Ocorrência</a>
+  <a href="/livroOcorrencias" class="w3-bar-item w3-button w3-hover-orange w3-panel w3-border w3-round-xlarge
+  " style="padding-top: 30px; padding-bottom: 30px; margin-top: 5px; margin-bottom: 10; font-size: 1.2em; color: white; text-align: center;">Livro de Ocorrências</a>
+</div>
 
-  <!-- Sidebar RIGHT -->
-  <div class="w3-sidebar w3-bar-block w3-collapse" style="display: none; background: #00A0AF; padding: 5px; width: 15%; position: fixed; right: 0;" id="mySidebar">    
-      
-    <div style="text-align: center">
+<!-- Sidebar RIGHT -->
+<div class="w3-sidebar w3-bar-block w3-collapse" style="display: none; background: #00A0AF; padding: 5px; width: 15%; position: fixed; right: 0;" id="mySidebar">    
+
+  <div style="text-align: center">
 
     <div align="center">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:100px">
+      <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:100px">
     </div>
     <h3 style="color: white; text-align: center; margin-bottom: 30%;">
-       Bem Vindo!
-    </h3>
+     Bem Vindo!
+   </h3>
 
-    <hr>
-    <br>
+   <hr>
+   <br>
 
-    <h4 style="color: white; margin-bottom: 20%;"><u>Informações Pessoais</u></h4>
-    <h5 style="color: white; text-align: center;" *ngFor= "let user of user">
+   <h4 style="color: white; margin-bottom: 20%;"><u>Informações Pessoais</u></h4>
+   <h5 style="color: white; text-align: center;" *ngFor= "let user of user">
     <span style="line-height: 1.6;"> Nome: {{user.nome}}</span> <br>
     <span style="line-height: 1.6;"> Estatuto: {{user.estatuto}}</span> <br>
     <span style="line-height: 1.6;"> Idade: {{user.idade}} anos</span> <br>
-    </h5>
+  </h5>
 
-    <button class="btn btn-primary" style="margin-bottom: 50%;" (click)="onSuperMegaClick()">Editar Dados</button>
+  <button class="btn btn-primary" style="margin-bottom: 50%;" (click)="onSuperMegaClick()">Editar Dados</button>
 
-    <button class="btn btn-danger btn-block" (click)="onLogout()">Logout</button>
-    </div>
+  <button class="btn btn-danger btn-block" style="background-color: red;" (click)="onLogout()">Logout</button>
+</div>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-container" style="width: 60%; height: 80%; position: fixed; margin: auto; overflow: auto; margin-top: 2%; margin-left: 10%; margin-right: 15%; margin-bottom: 15%">
+  <ul class="w3-ul w3-card-4" style="background-color: white;">
+    <li class="w3-bar" *ngFor= "let crianca of criancas">
+
+      <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
+
+      <div class="w3-bar-item">
+        <span class="w3-large">{{crianca.nome}}</span><br>
+        <span> Cartão de Cidadão: {{crianca.cc}}</span>
+      </div>
+
+      <button
+      style="background-color: red; font-size: 16px; padding: 3%;"
+      class="btn btn-primary w3-bar-item w3-right"
+      (click)="deleteCrianca(crianca._id)">Apagar</button>
+
+      <button
+      style="background-color: #00A0AF; font-size: 16px; padding: 3%; margin-right: 1%;"
+      class="btn btn-primary w3-bar-item w3-right"
+      (click)="onSubmit(crianca._id)">Informações Pessoais</button>
+
+      
+    </li>
+  </ul>
+
+</div>
+
+<!-- Footer -->
+<footer style="width: 65%; height: 12%; position: fixed; bottom: 0; background-color: #00A0AF; color: white; margin: auto; margin-left: 5%; font-size: 13px;">
+ <div class="w3-row w3-row-padding" style="display:inline-block; margin-top: 2%; ">
+   <div class="w3-quarter w3-mobile">
+     <p>Email:</p>
+     <p><a href="mailto:someone@example.com">mimar@mimar.pt</a></p>
+   </div>
+   <div class="w3-quarter w3-mobile">
+     <p>CASA MIMAR</p>
+     <p>Praceta de Santa Catarina n.º 25</p>
+   </div>
+   <div class="w3-quarter w3-mobile">
+     <p>Powered By:</p>
+     <p>Associação Mimar</p>
+   </div>
+   <div class="w3-quarter w3-mobile">
+    <a href="https://www.facebook.com/Associa%C3%A7%C3%A3o-Mimar-184127956290/">
+      <img class="facebook" src="http://localhost:3000/images/facebook.png" alt="facebook" style="width: 30px; height: 30px;">
+    </a>
   </div>
-
-
-  <!-- Page content -->
-  <div class="w3-container" style="width: 60%; height: 80%; position: fixed; margin: auto; overflow: auto; margin-top: 2%; margin-left: 10%; margin-right: 15%; margin-bottom: 15%">
-    <ul class="w3-ul w3-card-4" style="background-color: white;">
-      <li class="w3-bar" *ngFor= "let crianca of criancas">
-        <img src="http://localhost:3000/images/boy.png" class="w3-bar-item w3-circle w3-hide-small" alt="Boy" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">{{crianca.nome}}</span><br>
-          <span> Data de Entrada: {{crianca.data_de_entrada | date : "dd/MM/yyyy"}}</span>
-          
-        </div>
-        <button
-          style="background-color: #00A0AF; font-size: 16px; padding: 3%;"
-          class="btn btn-primary w3-bar-item w3-right"
-          (click)="onSubmit(crianca._id)">Informações Pessoais</button>
-      </li>
-    </ul>
-    
-  </div>
-
-  <!-- Footer -->
-  <footer style="width: 65%; height: 12%; position: fixed; bottom: 0; background-color: #00A0AF; color: white; margin: auto; margin-left: 5%; font-size: 13px;">
-   <div class="w3-row w3-row-padding" style="display:inline-block; margin-top: 2%; ">
-     <div class="w3-quarter w3-mobile">
-       <p>Email:</p>
-       <p><a href="mailto:someone@example.com">mimar@mimar.pt</a></p>
-     </div>
-     <div class="w3-quarter w3-mobile">
-       <p>CASA MIMAR</p>
-       <p>Praceta de Santa Catarina n.º 25</p>
-     </div>
-     <div class="w3-quarter w3-mobile">
-       <p>Powered By:</p>
-       <p>Associação Mimar</p>
-     </div>
-     <div class="w3-quarter w3-mobile">
-        <a href="https://www.facebook.com/Associa%C3%A7%C3%A3o-Mimar-184127956290/">
-          <img class="facebook" src="http://localhost:3000/images/facebook.png" alt="facebook" style="width: 30px; height: 30px;">
-        </a>
-     </div>
-    </div>
-  </footer>
+</div>
+</footer>
 </html>
 

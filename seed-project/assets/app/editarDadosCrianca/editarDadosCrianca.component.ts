@@ -66,17 +66,6 @@ export class EditarDadosCriancaComponent implements OnInit {
             );
     }
 
-    deleteCrianca(){
-    this.registaCriancaService.deleteCrianca(localStorage.getItem('criancaId'))
-        .subscribe(
-            data => {
-                window.alert("Criança eliminada com sucesso!");
-                localStorage.removeItem('criancaId');
-                this.router.navigateByUrl('centralPage');
-            },
-        );
-    }
-
     deleteCache(){
         localStorage.removeItem('criancaId');
         this.router.navigateByUrl('centralPage');

@@ -46,4 +46,15 @@ export class CentralPageComponent implements OnInit {
     onSuperMegaClick(){
         this.router.navigateByUrl('editarDadosFuncionario');
     }
+    
+    deleteCrianca(id){
+    this.registaCriancaService.deleteCrianca(id)
+        .subscribe(
+            data => {
+                window.alert("Criança eliminada com sucesso!");
+                window.location.reload();
+            },
+        );
+    }
+
 }
