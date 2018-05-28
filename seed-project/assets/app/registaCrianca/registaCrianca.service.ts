@@ -17,6 +17,15 @@ export class RegistaCriancaService {
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
+
+    updateCrianca(crianca: Criancas) {
+        const body = JSON.stringify(crianca);
+        const headers = new Headers({'Content-Type': 'application/json'});
+        let id = localStorage.getItem('criancaId');
+        return this.http.post('http://localhost:3000/crianca/' + id, body, {headers: headers})
+            .map((response: Response) => response.json())
+            .catch((error: Response) => Observable.throw(error.json()));
+    }
     
     getCriancas() {
         return this.http.get('http://localhost:3000/crianca')
@@ -35,4 +44,10 @@ export class RegistaCriancaService {
             })
             .catch((error: Response) => Observable.throw(error.json()));
     }
+
+    deleteCrianca(id) {
+        return this.http.delete('http://localhost:3000/crianca/' + id)
+        .map((response: Response) => response.json())
+        .catch((error: Response) => Observable.throw(error.json()));
+    } 
 }

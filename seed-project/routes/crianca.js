@@ -58,4 +58,42 @@ router.get('/:id', function (req, res) {
     });
 });
 
+router.post('/:id', function (req, res, next) {
+    Crianca.findByIdAndUpdate(req.params.id,{$set:req.body}, function(err, crianca){
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        res.status(200).json({
+            message: 'Updated Crianca',
+            obj: crianca
+        });
+    });
+});
+
+router.delete('/:id', function (req, res) {
+    Crianca.findById(req.params.id, function (err, crianca) {
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        crianca.remove(function (err, result) {
+            if (err) {
+                return res.status(500).json({
+                    title: 'An error occurred',
+                    error: err
+                });
+            }
+            res.status(200).json({
+                crianca: 'Criança eliminada com sucesso!',
+                obj: result
+            });
+        });
+    });
+});
+
 module.exports = router;
