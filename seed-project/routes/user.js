@@ -12,17 +12,32 @@ router.post('/', function (req, res, next) {
         password: bcrypt.hashSync(req.body.password, 10),
         email: req.body.email
     });
-    user.save(function (err, result) {
+    User.findOne({email: req.body.email}, function (err, user2) {
         if (err) {
             return res.status(500).json({
                 title: 'An error occurred',
                 error: err
             });
         }
-        res.status(201).json({
-            message: 'User created',
-            obj: result
-        });
+        if (user2) {
+            return res.status(401).json({
+                title: 'Utilizador já existe!',
+                error: {message: 'Utilizador já existe!'}
+            });
+        } else {
+            user.save(function (err, result) {
+                if (err) {
+                    return res.status(500).json({
+                        title: 'An error occurred',
+                        error: err
+                    });
+                }
+                res.status(201).json({
+                    message: 'User created',
+                    obj: result
+                });
+            });
+        }
     });
 });
 

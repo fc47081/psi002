@@ -24,11 +24,12 @@ export class SignupComponent implements OnInit {
         this.authService.signup(user)
             .subscribe(
                 data => {
-                    console.log(data),
                     window.alert("Utilizador registado com sucesso!");
                     this.router.navigateByUrl('auth/signin');
                 },
-                error => console.log(error)
+                error =>  {window.alert("Utilizador já existe!"),
+                 window.location.reload();
+                },
             );
         this.myForm.reset();
     }
