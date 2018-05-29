@@ -44,8 +44,16 @@ export class EditarDadosCriancaComponent implements OnInit {
             data_de_nascimento: new FormControl(null, Validators.required),
             data_de_entrada: new FormControl(null, Validators.required),
             tipo_de_sangue: new FormControl(null, Validators.required),
-            cc: new FormControl(null, Validators.required),
-            nif: new FormControl(null, Validators.required)
+            cc: new FormControl(null, [
+                Validators.minLength(8),
+                Validators.maxLength(8), 
+                Validators.required
+            ]),
+            nif: new FormControl(null, [
+                Validators.minLength(9),
+                Validators.maxLength(9), 
+                Validators.required
+            ])
         })
 
         this.registaCriancaService.getCriancaById(localStorage.getItem('criancaId'))
